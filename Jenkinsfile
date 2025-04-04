@@ -2,11 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
                 sh '''
-                	echo "Without docker"
-                	ls -la
+                	mvn clean install
                 '''
             }
         }
